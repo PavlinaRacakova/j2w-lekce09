@@ -28,7 +28,7 @@ public interface OsobaRepository extends JpaRepository<Osoba, Long> {
    *
    * Varianta pomocí Spring Data JPA.
    */
-  Page<Osoba> findOsobaByAdresa_Obec(String obec, Pageable pageable);
+  Page<Osoba> findOsobaByAdresa_ObecStartingWithIgnoreCase(String obec, Pageable pageable);
 
   /**
    * Vyhledá všechny osoby, které se narodily v daný den nebo dříve.
